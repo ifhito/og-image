@@ -23,6 +23,7 @@ function getCss(theme: string, fontSize: string) {
         radial = 'dimgray';
     }
     return `
+    @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
     @font-face {
         font-family: 'MyFont';
         src: url(/Noto_Sans_JP/NotoSansJP-Medium.otf);
@@ -100,7 +101,7 @@ function getCss(theme: string, fontSize: string) {
     }
     
     .heading {
-        font-family: 'MyFont';
+        font-family: 'M PLUS 1p', 'Inter', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: ${foreground};
