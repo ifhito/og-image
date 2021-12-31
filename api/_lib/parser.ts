@@ -1,6 +1,6 @@
 import { IncomingMessage } from 'http';
 import { parse } from 'url';
-import { ParsedRequest, Theme } from './types';
+import { ParsedRequest, Theme} from './types';
 
 export function parseRequest(req: IncomingMessage) {
     console.log('HTTP ' + req.url);
@@ -37,6 +37,7 @@ export function parseRequest(req: IncomingMessage) {
         heights: getArray(heights),
     };
     parsedRequest.images = getDefaultImages(parsedRequest.images, parsedRequest.theme);
+    // parsedRequest.images = [`${process.env.PUBLIC_URL}/blogIcon.svg`];
     return parsedRequest;
 }
 
